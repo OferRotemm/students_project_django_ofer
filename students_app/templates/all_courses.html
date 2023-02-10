@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>All Courses</h3>
+{% for course in all_courses %}
+<li>{{course.name}} - {{course.description}} - {{course.lecturer}}</li>
+{% endfor %}
+
+
+{% endblock content %}

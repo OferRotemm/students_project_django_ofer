@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>Search Course</h3>
+<input type="text" name="search" placeholder="course title or description"><br><br>
+<input type="submit" value="Search">
+<div>
+    {% for i in search_name %}
+   <li>{{i.name}}</li>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}

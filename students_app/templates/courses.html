@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Add Course</h3>
+
+    <form action="" method="post">
+        <input type="text" name="course" placeholder="course title" autofocus><br>
+        
+        <input list="lecturer" name="lecturer" placeholder="Choose a lecturer">
+        <datalist id="lecturer">
+            {% for lecturer in all_lecturers %}
+        <option value="{{lecturer.name}}">
+            {% endfor %}
+        </datalist><br>
+        
+        <input type="text" name="description" placeholder="course description"><br><br>
+        <input type="submit" value="Add">  
+    </form>
+{{message}}<br>
+
+<h3>Search Course</h3>
+<input type="text" name="search" placeholder="Search course title or description"><br><br>
+<input type="submit" value="Search">
+<div>
+    {{search_results}}
+    <a href="/search_courses">Search</a>
+</div><br>
+
+<h3>See All Courses</h3>
+<a href="/all_courses">See All</a>
+
+
+{% endblock content %}

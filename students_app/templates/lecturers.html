@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Add Lecturer</h3>
+<form action="" method="post">
+    <input type="text" name="name" placeholder="name" autofocus><br>
+    <input type="email" name="email" placeholder="email"><br>
+    <input type="text" name="can_teach" placeholder="What can he teach?"><br><br>
+    <input type="submit" value="Add">  
+</form>
+{{message}}<br>
+
+<h3>Search Lecturer</h3>
+<input type="text" name="search" placeholder="name or email"><br><br>
+<input type="submit" value="Search">
+
+<div>
+    {{search_results}}
+</div>
+
+<h3>See All Lecturers</h3>
+<a href="/to_be_continued">See All</a>
+
+
+{% endblock content %}

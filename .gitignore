@@ -1,0 +1,4 @@
+db.sqlite3
+*.pyc
+students_app/migrations
+students_project
