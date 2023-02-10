@@ -2,9 +2,10 @@ from django.db import models
 
 # Create your models here.
 
-#DB:
-#courses: id, name, lecturer, description
-#lecturers: id, name, email (unique), can teach
+# DB:
+# courses: id, name, lecturer, description
+# lecturers: id, name, email (unique), can teach
+
 
 class Lecturers(models.Model):
     name = models.CharField(max_length=15)
